@@ -1,0 +1,21 @@
+{
+  "name": "VerLabel",
+  "version": "1.0.0",
+  "summary": "Ver Label",
+  "description": "label font top",
+  "homepage": "https://github.com/emodeqidao/VerLabel",
+  "license": "MIT",
+  "authors": {
+    "xixi": "xixi_wen@foxmail.com"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source": {
+    "git": "https://github.com/emodeqidao/VerLabel.git",
+    "tag": "1.0.0"
+  },
+  "source_files": "VerLabel/*",
+  "frameworks": "UIKit",
+  "requires_arc": true
+}
