@@ -84,10 +84,10 @@
     NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     NSLog(@"%@",array);
     
-    NSMutableArray *provinceArray = [NSMutableArray array];
-    for (NSDictionary *item in array) {
-        
-    }
+
+    
+
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
