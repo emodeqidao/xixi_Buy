@@ -4,27 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FMDB.xcscheme</key>
+		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-HLHanZiToPinYin.xcscheme</key>
+		<key>HLHanZiToPinYin.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MMProgressHUD.xcscheme</key>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-VerLabel.xcscheme</key>
+		<key>MMProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,35 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>VerLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3A4CAA69B092CED3DBFFD9EE</key>
+		<key>0E1F3FBA7CEEECCA44E48DDF5C9A3C4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58AF148D4038731AE3A16E7F</key>
+		<key>2B318CB99DCD4788025F4D92B34327E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>693ACB5BF60DF9353A3A08F9</key>
+		<key>324E70789AA9BF76249798470F7A5258</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FC9EB10C34A4FCB2D9EBCFE</key>
+		<key>6F62F19FBC5525677831A49DFFB264E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B1C96077F7B4A1A820A6DF6</key>
+		<key>942E9E5BBA58CACCE09CF103DF938938</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A76CB94AA3C9FAB53FE52818</key>
+		<key>D6930F93992CE54AB841376D49E88BDA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8CA75B2A445EF14FE71BC81E40AE777</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -26,6 +26,7 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - HLHanZiToPinYin (0.0.1)
+  - MJRefresh (2.3.2)
   - MMProgressHUD (0.3.1)
   - VerLabel (1.0.0)
 
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - FMDB (~> 2.5)
   - HLHanZiToPinYin (~> 0.0.1)
+  - MJRefresh (~> 2.3.2)
   - MMProgressHUD (~> 0.3.1)
   - VerLabel (from `https://github.com/emodeqidao/VerLabel.git`)
 
@@ -49,7 +51,8 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   HLHanZiToPinYin: ab5de40dd0f2f82886e1db76af2a90d26f614dd5
+  MJRefresh: 0f6f5e8387970607c26080b44058b229a23065d7
   MMProgressHUD: dac2655d62d28e7d6dc28bf72d9531a4d4c62459
   VerLabel: 0e86d71412da9da745c8a9d1247ab0d0b99e2709
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2
