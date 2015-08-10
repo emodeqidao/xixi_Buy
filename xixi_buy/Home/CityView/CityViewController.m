@@ -48,27 +48,26 @@
 #pragma mark
 - (void) initSearhBar
 {
-    _tableView = [[UITableView alloc] init];
-    _tableView.frame = CGRectMake(0, 0, 320, CGRectGetHeight(self.view.frame));
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.backgroundColor = [UIColor whiteColor];
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    _tableView.showsVerticalScrollIndicator = NO;
-    [self.view addSubview:_tableView];
-
-    
     mySearchBar = [[UISearchBar alloc]init];
     mySearchBar.delegate = self;
     [mySearchBar setPlaceholder:@"输入城市名称或拼音查询"];
-    
-    [_tableView setTableHeaderView:mySearchBar];
     
     searchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:mySearchBar contentsController:self];
     searchDisplayController.active = NO;
     searchDisplayController.searchResultsDataSource = self;
     searchDisplayController.searchResultsDelegate = self;
+
     
+    _tableView = [[UITableView alloc] init];
+    _tableView.frame = CGRectMake(0, 0, 320, CGRectGetHeight(self.view.frame));
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.showsVerticalScrollIndicator = NO;
+    [self.view addSubview:_tableView];
+    
+    [_tableView setTableHeaderView:mySearchBar];
     
     if (is_IOS_7)
         //分割线的位置不带偏移
@@ -81,14 +80,28 @@
 - (void)initCityData
 {
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"plist"];
-    NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
-    NSLog(@"%@",array);
+    provinceArray = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    NSLog(@"%@",provinceArray);
     
+    for (NSDictionary *item in provinceArray)
+    {
+        NSLog(@"%@",item);
+    }
+    
+    [_tableView reloadData];
+    
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return provinceArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    NSArray *tempArr = provinceArray[section][@"cities"];
+    return tempArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,12 +109,29 @@
     static NSString *cellId = @"mycell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    NSArray *tempArr = provinceArray[indexPath.section][@"cities"];
+    cell.textLabel.text = tempArr[indexPath.row];
     return cell;
+}
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.frame = CGRectMake(5, 0, 200, 30);
+    titleLabel.textColor = [UIColor purpleColor];
+    titleLabel.text = provinceArray[section][@"state"];
+    return titleLabel;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
