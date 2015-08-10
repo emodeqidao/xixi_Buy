@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "MyTabBar.h"
+#import "LeftSlideViewController.h"
+#import "LeftSortsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) MyTabBar *myTab;
+
+@property (strong, nonatomic) LeftSlideViewController *LeftSlideVC;
 
 @end
 

@@ -19,4 +19,7 @@
     NSMutableDictionary *dataDic;
     NSMutableArray *provinceArray; /**< 省份数据源 */
 }
+
+@property (nonatomic, copy) void (^cityViewBlock)(NSDictionary *returnCity);
+
 @end

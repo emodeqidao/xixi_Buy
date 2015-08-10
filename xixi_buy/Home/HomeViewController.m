@@ -27,7 +27,7 @@
 {
     self.backButton.hidden = YES;
     
-    UIButton *cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [cityBtn setTitle:@"选择城市" forState:UIControlStateNormal];
     cityBtn.frame = CGRectMake(0, 0, 100, 44);
     cityBtn.backgroundColor = [UIColor purpleColor];
@@ -39,9 +39,17 @@
 - (void)buttonAction:(id)sender
 {
     CityViewController *cityView = [[CityViewController alloc] init];
+    cityView.cityViewBlock = ^(NSDictionary *returnCity)
+    {
+        [self reSetCityLabel:returnCity];
+    };
     [TABBAR hidesTabBar:YES];
     [self.navigationController pushViewController:cityView animated:YES];
-    
+}
+
+- (void)reSetCityLabel:(NSDictionary *)dicArg
+{
+    [cityBtn setTitle:[NSString stringWithFormat:@"选择城市-%@",dicArg[@"cityName"]] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

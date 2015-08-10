@@ -84,15 +84,10 @@
     NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     NSLog(@"%@",array);
     
-
-    
-
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     return 20;
 }
 
@@ -107,6 +102,16 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.cityViewBlock) {
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%ld",indexPath.row],@"cityName",nil];
+        self.cityViewBlock(dic);
+    }
+    
+    [self popBack:nil];
 }
 
 - (void)didReceiveMemoryWarning {

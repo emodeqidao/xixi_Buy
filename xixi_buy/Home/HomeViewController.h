@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface HomeViewController : BaseViewController
-
+{
+    UIButton *cityBtn;
+}
 @end

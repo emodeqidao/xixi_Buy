@@ -34,6 +34,11 @@
 		4E89938B1B68CCF100F2A7D0 /* NearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E89938A1B68CCF100F2A7D0 /* NearViewController.m */; };
 		4E89938E1B68CD0900F2A7D0 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E89938D1B68CD0900F2A7D0 /* PersonViewController.m */; };
 		4E8993911B68CD1A00F2A7D0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8993901B68CD1A00F2A7D0 /* SearchViewController.m */; };
+		FA3200CC1B789ED30024459B /* LeftSortsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200CB1B789ED30024459B /* LeftSortsViewController.m */; };
+		FA3200D01B78A6E40024459B /* otherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200CF1B78A6E40024459B /* otherViewController.m */; };
+		FA3200D71B78A8380024459B /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200D41B78A8380024459B /* LeftSlideViewController.m */; };
+		FA3200D81B78A8380024459B /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200D61B78A8380024459B /* UIView_extra.m */; };
+		FA3200DA1B78A9A80024459B /* leftbackiamge.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3200D91B78A9A80024459B /* leftbackiamge.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +97,15 @@
 		4E8993901B68CD1A00F2A7D0 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		70254E9D6855A23D5654ABBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A755A86A93BAC058E189A105 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FA3200CA1B789ED30024459B /* LeftSortsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSortsViewController.h; sourceTree = "<group>"; };
+		FA3200CB1B789ED30024459B /* LeftSortsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSortsViewController.m; sourceTree = "<group>"; };
+		FA3200CE1B78A6E40024459B /* otherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = otherViewController.h; sourceTree = "<group>"; };
+		FA3200CF1B78A6E40024459B /* otherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = otherViewController.m; sourceTree = "<group>"; };
+		FA3200D31B78A8380024459B /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
+		FA3200D41B78A8380024459B /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
+		FA3200D51B78A8380024459B /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
+		FA3200D61B78A8380024459B /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
+		FA3200D91B78A9A80024459B /* leftbackiamge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftbackiamge.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +219,7 @@
 		4E89935E1B6880B100F2A7D0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FA3200D21B78A8380024459B /* LeftSlideViewController */,
 				4E8993781B68C4D900F2A7D0 /* cityData */,
 				4E89935F1B6880B100F2A7D0 /* color */,
 			);
@@ -223,6 +238,7 @@
 		4E8993631B689E8E00F2A7D0 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FA3200D91B78A9A80024459B /* leftbackiamge.png */,
 				4E89931C1B6877C300F2A7D0 /* Images.xcassets */,
 				4E8993641B689E8E00F2A7D0 /* TabBarImage */,
 			);
@@ -270,6 +286,8 @@
 		4E89937D1B68C5BB00F2A7D0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FA3200CD1B78A6E40024459B /* Ohter */,
+				FA3200C91B789ED30024459B /* LeftSlip */,
 				4E89937E1B68C5CE00F2A7D0 /* Found */,
 				4E89937F1B68C5CE00F2A7D0 /* Home */,
 				4E8993801B68C5CE00F2A7D0 /* Nearby */,
@@ -338,6 +356,35 @@
 				70254E9D6855A23D5654ABBF /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA3200C91B789ED30024459B /* LeftSlip */ = {
+			isa = PBXGroup;
+			children = (
+				FA3200CA1B789ED30024459B /* LeftSortsViewController.h */,
+				FA3200CB1B789ED30024459B /* LeftSortsViewController.m */,
+			);
+			path = LeftSlip;
+			sourceTree = "<group>";
+		};
+		FA3200CD1B78A6E40024459B /* Ohter */ = {
+			isa = PBXGroup;
+			children = (
+				FA3200CE1B78A6E40024459B /* otherViewController.h */,
+				FA3200CF1B78A6E40024459B /* otherViewController.m */,
+			);
+			path = Ohter;
+			sourceTree = "<group>";
+		};
+		FA3200D21B78A8380024459B /* LeftSlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA3200D31B78A8380024459B /* LeftSlideViewController.h */,
+				FA3200D41B78A8380024459B /* LeftSlideViewController.m */,
+				FA3200D51B78A8380024459B /* UIView_extra.h */,
+				FA3200D61B78A8380024459B /* UIView_extra.m */,
+			);
+			path = LeftSlideViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +473,7 @@
 				4E89931B1B6877C300F2A7D0 /* Main.storyboard in Resources */,
 				4E8993731B689E8E00F2A7D0 /* home_s.png in Resources */,
 				4E8993701B689E8E00F2A7D0 /* _found.png in Resources */,
+				FA3200DA1B78A9A80024459B /* leftbackiamge.png in Resources */,
 				4E89936E1B689E8E00F2A7D0 /* _acc.png in Resources */,
 				4E89937B1B68C4D900F2A7D0 /* area.plist in Resources */,
 				4E8993761B689E8E00F2A7D0 /* hood_s.png in Resources */,
@@ -486,7 +534,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3200D81B78A8380024459B /* UIView_extra.m in Sources */,
 				4E8993621B6880B100F2A7D0 /* UIColor+Extend.m in Sources */,
+				FA3200D71B78A8380024459B /* LeftSlideViewController.m in Sources */,
+				FA3200CC1B789ED30024459B /* LeftSortsViewController.m in Sources */,
 				4E8993851B68C69700F2A7D0 /* BaseViewController.m in Sources */,
 				4E8993911B68CD1A00F2A7D0 /* SearchViewController.m in Sources */,
 				4E8993181B6877C300F2A7D0 /* ViewController.m in Sources */,
@@ -497,6 +548,7 @@
 				4E761FF91B69F62B0028B30A /* CityViewController.m in Sources */,
 				4E8993881B68C6BB00F2A7D0 /* HomeViewController.m in Sources */,
 				4E8993581B68791800F2A7D0 /* MyTabBar.m in Sources */,
+				FA3200D01B78A6E40024459B /* otherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

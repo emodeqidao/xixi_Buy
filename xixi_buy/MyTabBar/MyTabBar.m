@@ -7,14 +7,14 @@
 //
 
 #import "MyTabBar.h"
-#import "HomeViewController.h"
+#import "AppDelegate.h"
 
 @interface MyTabBar ()
 
 @end
 
 @implementation MyTabBar
-
+@synthesize homeView;
 @synthesize isSelected;
 @synthesize isHide;
 
@@ -23,8 +23,8 @@
         
         isSelected = YES;
         isHide = YES;
-        
-        HomeViewController *homeView    = [[HomeViewController alloc] init];
+    
+        homeView = [[HomeViewController alloc] init];
         homeView.view.backgroundColor = [UIColor redColor];
         
         UIViewController *weiDiaoView = [[UIViewController alloc] init];
@@ -147,16 +147,24 @@
 }
 
 #pragma mark 隐藏TabBar
-- (void)hidesTabBar:(BOOL)is {
+- (void)hidesTabBar:(BOOL)is
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3f];
     if (is&&self.isHide) {
         self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.origin.y+69, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
         self.isHide = false;
+        
+        [myDelegate.LeftSlideVC setPanEnabled:NO];
+
     }
     else if (!is&&!self.isHide) {
         self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.origin.y-69, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
         self.isHide = true;
+        
+        [myDelegate.LeftSlideVC setPanEnabled:YES];
     }
     [UIView commitAnimations];
 }

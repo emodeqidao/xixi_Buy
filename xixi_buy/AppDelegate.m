@@ -19,9 +19,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    myTab = [[MyTabBar alloc] init];
-    self.window.rootViewController = myTab;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];   //设置通用背景颜色
     [self.window makeKeyAndVisible];
+    
+    myTab = [[MyTabBar alloc] init];
+//    self.mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    LeftSortsViewController *leftVC = [[LeftSortsViewController alloc] init];
+    self.LeftSlideVC = [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:myTab];
+    self.window.rootViewController = self.LeftSlideVC;
+    
+    leftVC.leftSelectBlock = ^(id viewObject){
+        NSLog(@"%@",viewObject);
+//        [self.mainNavigationController pushViewController:viewObject animated:YES];
+        [myTab.homeView.navigationController pushViewController:viewObject animated:YES];
+    };
     
     return YES;
 }
