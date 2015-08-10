@@ -39,6 +39,8 @@
 		FA3200D71B78A8380024459B /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200D41B78A8380024459B /* LeftSlideViewController.m */; };
 		FA3200D81B78A8380024459B /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200D61B78A8380024459B /* UIView_extra.m */; };
 		FA3200DA1B78A9A80024459B /* leftbackiamge.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3200D91B78A9A80024459B /* leftbackiamge.png */; };
+		FA3200DD1B78E5530024459B /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200DC1B78E5530024459B /* BaseCell.m */; };
+		FA3200E01B78E56D0024459B /* CityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200DF1B78E56D0024459B /* CityCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,10 @@
 		FA3200D51B78A8380024459B /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
 		FA3200D61B78A8380024459B /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
 		FA3200D91B78A9A80024459B /* leftbackiamge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftbackiamge.png; sourceTree = "<group>"; };
+		FA3200DB1B78E5530024459B /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		FA3200DC1B78E5530024459B /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		FA3200DE1B78E56D0024459B /* CityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCell.h; sourceTree = "<group>"; };
+		FA3200DF1B78E56D0024459B /* CityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 			children = (
 				4E761FF71B69F62B0028B30A /* CityViewController.h */,
 				4E761FF81B69F62B0028B30A /* CityViewController.m */,
+				FA3200DE1B78E56D0024459B /* CityCell.h */,
+				FA3200DF1B78E56D0024459B /* CityCell.m */,
 			);
 			path = CityView;
 			sourceTree = "<group>";
@@ -212,6 +220,8 @@
 			children = (
 				4E8993831B68C69700F2A7D0 /* BaseViewController.h */,
 				4E8993841B68C69700F2A7D0 /* BaseViewController.m */,
+				FA3200DB1B78E5530024459B /* BaseCell.h */,
+				FA3200DC1B78E5530024459B /* BaseCell.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -534,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3200DD1B78E5530024459B /* BaseCell.m in Sources */,
 				FA3200D81B78A8380024459B /* UIView_extra.m in Sources */,
 				4E8993621B6880B100F2A7D0 /* UIColor+Extend.m in Sources */,
 				FA3200D71B78A8380024459B /* LeftSlideViewController.m in Sources */,
@@ -549,6 +560,7 @@
 				4E8993881B68C6BB00F2A7D0 /* HomeViewController.m in Sources */,
 				4E8993581B68791800F2A7D0 /* MyTabBar.m in Sources */,
 				FA3200D01B78A6E40024459B /* otherViewController.m in Sources */,
+				FA3200E01B78E56D0024459B /* CityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

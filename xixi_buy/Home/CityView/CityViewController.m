@@ -7,6 +7,7 @@
 //
 
 #import "CityViewController.h"
+#import "CityCell.h"
 
 @interface CityViewController ()
 
@@ -48,7 +49,12 @@
 #pragma mark
 - (void) initSearhBar
 {
+    UIView *headerView = [[UIView alloc] init];
+    headerView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100);
+    headerView.backgroundColor = [UIColor purpleColor];
+    
     mySearchBar = [[UISearchBar alloc]init];
+    mySearchBar.frame = CGRectMake(0, 0, CGRectGetWidth(headerView.frame), 44);
     mySearchBar.delegate = self;
     [mySearchBar setPlaceholder:@"输入城市名称或拼音查询"];
     
@@ -57,6 +63,7 @@
     searchDisplayController.searchResultsDataSource = self;
     searchDisplayController.searchResultsDelegate = self;
 
+    [headerView addSubview:mySearchBar];
     
     _tableView = [[UITableView alloc] init];
     _tableView.frame = CGRectMake(0, 0, 320, CGRectGetHeight(self.view.frame));
@@ -67,11 +74,11 @@
     _tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_tableView];
     
-    [_tableView setTableHeaderView:mySearchBar];
+    [_tableView setTableHeaderView:headerView];
     
-    if (is_IOS_7)
-        //分割线的位置不带偏移
-        _tableView.separatorInset = UIEdgeInsetsZero;
+//    if (is_IOS_7)
+//        //分割线的位置不带偏移
+//        _tableView.separatorInset = UIEdgeInsetsZero;
 
 }
 
@@ -83,10 +90,10 @@
     provinceArray = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     NSLog(@"%@",provinceArray);
     
-    for (NSDictionary *item in provinceArray)
-    {
-        NSLog(@"%@",item);
-    }
+//    for (NSDictionary *item in provinceArray)
+//    {
+//        NSLog(@"%@",item);
+//    }
     
     [_tableView reloadData];
     
@@ -106,16 +113,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellId = @"mycell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    static NSString *cellId = @"cityCell_id";
+    CityCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[CityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
     NSArray *tempArr = provinceArray[indexPath.section][@"cities"];
-    cell.textLabel.text = tempArr[indexPath.row];
+    cell.cityLabel.text = tempArr[indexPath.row];
     return cell;
 }
 
@@ -136,7 +143,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.cityViewBlock) {
+    if (self.cityViewBlock)
+    {
         NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%ld",indexPath.row],@"cityName",nil];
         self.cityViewBlock(dic);
     }
