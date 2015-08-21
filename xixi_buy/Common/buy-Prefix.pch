@@ -44,5 +44,8 @@ fprintf(stderr, "-------\n");                                               \
 
 #define is_IOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 
+//是否要开启 左边的工具栏
+#define LetSlideEnabled(isBool) [((AppDelegate *)[[UIApplication sharedApplication] delegate]).LeftSlideVC setPanEnabled:isBool]
+
 
 #endif

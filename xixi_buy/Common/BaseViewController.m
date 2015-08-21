@@ -21,6 +21,7 @@
     [self initNav];
 }
 
+
 //继承的view 实现 initNav 这个方法就可以 生成返回的按钮
 - (void)initNav
 {

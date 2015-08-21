@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "CityDataInformation.h"
 
 @interface CityViewController : BaseViewController
 <UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>

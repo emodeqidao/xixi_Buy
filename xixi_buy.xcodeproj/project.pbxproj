@@ -41,6 +41,7 @@
 		FA3200DA1B78A9A80024459B /* leftbackiamge.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3200D91B78A9A80024459B /* leftbackiamge.png */; };
 		FA3200DD1B78E5530024459B /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200DC1B78E5530024459B /* BaseCell.m */; };
 		FA3200E01B78E56D0024459B /* CityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3200DF1B78E56D0024459B /* CityCell.m */; };
+		FAF048EF1B86C9D80008DD12 /* CityDataInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF048EE1B86C9D80008DD12 /* CityDataInformation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		FA3200DC1B78E5530024459B /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
 		FA3200DE1B78E56D0024459B /* CityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCell.h; sourceTree = "<group>"; };
 		FA3200DF1B78E56D0024459B /* CityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCell.m; sourceTree = "<group>"; };
+		FAF048ED1B86C9D80008DD12 /* CityDataInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDataInformation.h; sourceTree = "<group>"; };
+		FAF048EE1B86C9D80008DD12 /* CityDataInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDataInformation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				4E761FF81B69F62B0028B30A /* CityViewController.m */,
 				FA3200DE1B78E56D0024459B /* CityCell.h */,
 				FA3200DF1B78E56D0024459B /* CityCell.m */,
+				FAF048ED1B86C9D80008DD12 /* CityDataInformation.h */,
+				FAF048EE1B86C9D80008DD12 /* CityDataInformation.m */,
 			);
 			path = CityView;
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3200DD1B78E5530024459B /* BaseCell.m in Sources */,
+				FAF048EF1B86C9D80008DD12 /* CityDataInformation.m in Sources */,
 				FA3200D81B78A8380024459B /* UIView_extra.m in Sources */,
 				4E8993621B6880B100F2A7D0 /* UIColor+Extend.m in Sources */,
 				FA3200D71B78A8380024459B /* LeftSlideViewController.m in Sources */,
@@ -692,7 +698,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xixi_buy/Common/buy-Prefix.pch";
 				INFOPLIST_FILE = xixi_buy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -706,7 +712,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xixi_buy/Common/buy-Prefix.pch";
 				INFOPLIST_FILE = xixi_buy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

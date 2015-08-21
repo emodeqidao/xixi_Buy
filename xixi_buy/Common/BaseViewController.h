@@ -14,5 +14,4 @@
 @property (nonatomic, strong) UIButton *backButton;
 
 - (void)initNav;
-
 @end
